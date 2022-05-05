@@ -1,0 +1,31 @@
+
+## VPN 원리
+
+회사 네트워크 
+- 서버 3.3.3.100
+- 게이트웨이 3.3.3.1
+
+외부 pc 에서 접근하고자 할 때 ,
+
+VPN Client 라는 프로그램 설치를 하면 내 PC IP 계층에 VNIC 이라는 가상 NIC 이 생성된다.  \
+이 VNIC 은 회사 네트워크 대역 3.3.3.200 이라는 새로운 IP 주소를 갖고 있다.
+
+내 목적지 주소가 3.3.3.100 일 때 
+VNIC 을 지나 TCP/IP 를 지나 인터넷으로 나가는데 
+이때 IP Header 가 2개가 붙는다. 
+ 
+outer IP | inner IP | TCP Header | payload 
+
+inner IP 의 
+- source 는 3.3.3.200  (VPN IP)
+- destination 은 3.3.3.100 (회사 서버 주소)
+
+outer IP 의 
+ - source 는 9.9.9.100 (내 pc의 IP)
+ - destination 은 3.3.3.1 (회사 게이트웨이 주소)
+
+이렇게 내 PC가 회사 게이트웨이에 연결되는 것을 터널링이라고 한다.
+
+ \
+  ![default](/img/VPN.png)
+
