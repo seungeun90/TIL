@@ -8,7 +8,6 @@
 
 
 ## 송신 측 
-----
 Process 에서 할당받은 Memory(Buffer) 에 쓴 파일을 TCP Buffer 로 Copy 하는 것을 Buffered I/O 라고 한다.
 TCP 에서 이렇게 Copy 한 파일의 일부분을 Segment 로 IP 계층으로 보낸다. 
 IP 계층에서는 이를 Packet 이라고 한다. (택배 박스)
@@ -17,13 +16,11 @@ NIC 계층에서는 Frame 이라고 한다. (트럭)
   
     
 ## 수신 측
-----
 TCP Buffer 에서 Process Buffer 로 데이터를 Copy 한다. 
 이 속도는 네트워크 속도보다 빨라야한다.
 TCP buffer 의 사이즈를 window size 라고 한다.  
   
 ## 수신 측 Buffered I/O 가 네트워크 속도보다 빨라야 하는 이유 
-----
 예를 들어 1~10까지의 Segment를 송신해야 할 때, 
 이걸 한 번에 다 보내지 않고 1,2번 Segment 만 먼저 보내고 Wait 를 한다. => TCP 속도 지연의 이유 중 하나.
 

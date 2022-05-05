@@ -1,4 +1,4 @@
 #TIL
 
 - 네트워크 : 
-  * [TCP/IP 송수신 원리](#tcp,ip-송수신-원리)
+  * [TCP/IP 송수신 원리](/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/TCP%2CIP%20%EC%86%A1%EC%88%98%EC%8B%A0%20%EC%9B%90%EB%A6%AC.md)
